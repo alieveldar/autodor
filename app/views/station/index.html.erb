@@ -1,0 +1,15 @@
+<h1><%= @sname %></h1>
+
+
+<table border="2px">
+<tbody>
+<% @stations.each do |st| %>
+
+<tr>
+<td><%= st.name %></td>
+<td><%= st.master %></td>
+</tr>
+
+<% end %>
+</tbody>
+</table>

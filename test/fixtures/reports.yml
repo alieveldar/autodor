@@ -1,0 +1,86 @@
+# == Schema Information
+#
+# Table name: reports
+#
+#  id                 :integer          not null, primary key
+#  station            :string
+#  f95                :integer
+#  f92                :integer
+#  f80                :integer
+#  fdt                :integer
+#  fgaz               :integer
+#  magazine           :integer
+#  vipcardonstock     :integer
+#  vipcardtreid       :integer
+#  discountonstock    :integer
+#  discounttreid      :integer
+#  carwasher          :integer
+#  allinstation       :integer
+#  allf95             :integer
+#  allf92             :integer
+#  allf80             :integer
+#  allfdt             :integer
+#  allfgaz            :integer
+#  allmagazine        :integer
+#  allvipcardonstock  :integer
+#  allvipcardtreid    :integer
+#  alldiscountonstock :integer
+#  alldiscounttreid   :integer
+#  allcarwasher       :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  station: MyString
+  f95: 1
+  f92: 1
+  f80: 1
+  fdt: 1
+  fgaz: 1
+  magazine: 1
+  vipcardonstock: 1
+  vipcardtreid: 1
+  discountonstock: 1
+  discounttreid: 1
+  carwasher: 1
+  allinstation: 1
+  allf95: 1
+  allf92: 1
+  allf80: 1
+  allfdt: 1
+  allfgaz: 1
+  allmagazine: 1
+  allvipcardonstock: 1
+  allvipcardtreid: 1
+  alldiscountonstock: 1
+  alldiscounttreid: 1
+  allcarwasher: 1
+
+two:
+  station: MyString
+  f95: 1
+  f92: 1
+  f80: 1
+  fdt: 1
+  fgaz: 1
+  magazine: 1
+  vipcardonstock: 1
+  vipcardtreid: 1
+  discountonstock: 1
+  discounttreid: 1
+  carwasher: 1
+  allinstation: 1
+  allf95: 1
+  allf92: 1
+  allf80: 1
+  allfdt: 1
+  allfgaz: 1
+  allmagazine: 1
+  allvipcardonstock: 1
+  allvipcardtreid: 1
+  alldiscountonstock: 1
+  alldiscounttreid: 1
+  allcarwasher: 1
