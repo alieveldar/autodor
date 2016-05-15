@@ -1,21 +1,6 @@
 Rails.application.routes.draw do
   root 'station#index'
-  get 'station/index'
-
-  get 'station/create'
-
-  get 'station/edit'
-
-  get 'station/delete'
-
-  get 'report/index'
-
-  get 'report/show'
-
-  get 'report/edit'
-
-  get 'report/create'
-	
+  
 
 	resources :report
 	resources :station

@@ -1,0 +1,18 @@
+       Prefix Verb   URI Pattern                 Controller#Action
+         root GET    /                           station#index
+ report_index GET    /report(.:format)           report#index
+              POST   /report(.:format)           report#create
+   new_report GET    /report/new(.:format)       report#new
+  edit_report GET    /report/:id/edit(.:format)  report#edit
+       report GET    /report/:id(.:format)       report#show
+              PATCH  /report/:id(.:format)       report#update
+              PUT    /report/:id(.:format)       report#update
+              DELETE /report/:id(.:format)       report#destroy
+station_index GET    /station(.:format)          station#index
+              POST   /station(.:format)          station#create
+  new_station GET    /station/new(.:format)      station#new
+ edit_station GET    /station/:id/edit(.:format) station#edit
+      station GET    /station/:id(.:format)      station#show
+              PATCH  /station/:id(.:format)      station#update
+              PUT    /station/:id(.:format)      station#update
+              DELETE /station/:id(.:format)      station#destroy

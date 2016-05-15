@@ -1,0 +1,8 @@
+<h1>Ввод новой АЗС</h1>
+<p>Заполните все поля для создания нового обьекта</p>
+
+ <%= form_for :station, url: '/station' do |f| %>
+      <%= f.text_field :name, :placeholder => 'Наименование обьекта' %>
+      <%= f.text_field :master, :placeholder => 'Ответственный мастер АЗС' %>
+      <%= f.submit "Добавить", :class => "form-btn" %>
+    <% end %>

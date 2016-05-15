@@ -6,10 +6,13 @@
 <% @stations.each do |st| %>
 
 <tr>
+<td><% st.id %></td>
 <td><%= st.name %></td>
 <td><%= st.master %></td>
+<td><%= link_to 'Delete', station_path(@station), method: :DELETE, data: {confirm:'Are ypu sure?'} %> </td>
 </tr>
 
 <% end %>
 </tbody>
 </table>
+<h3><solid><%= link_to 'Добавить новый обьект', 'new_station_path' %></solid></h3>
