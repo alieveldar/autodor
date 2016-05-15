@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  root 'station#index'
+  root 'stations#index'
+  resources :stations
+  get 'edit_stations_path' => 'stations#edit'
+  get 'new_station_path' => 'stations#new'
   
 
-	resources :report
-	resources :station
+
+	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

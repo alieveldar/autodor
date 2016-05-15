@@ -2,14 +2,14 @@
 
 
 <table border="2px">
-<tbody>
+<tbody>rails rus destroy
 <% @stations.each do |st| %>
 
 <tr>
-<td><% st.id %></td>
+
 <td><%= st.name %></td>
 <td><%= st.master %></td>
-<td><%= link_to 'Delete', station_path(@station), method: :DELETE, data: {confirm:'Are ypu sure?'} %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
 </tr>
 
 <% end %>

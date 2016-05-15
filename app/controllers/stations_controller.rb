@@ -1,4 +1,4 @@
-class StationController < ApplicationController
+class StationsController < ApplicationController
   def index
 	@sname = "КОП АВТОДОРСТРОЙ"
 	@stations = Station.all
@@ -7,7 +7,7 @@ class StationController < ApplicationController
     @station = Station.new
   end
   def create
-     @station = Station.new(station_params)
+     @station = Station.new(user_params)
       if @station.save
         #sesion[:user_id] = @user.id
         redirect_to root_url
@@ -15,17 +15,20 @@ class StationController < ApplicationController
         redirect_to root_url
       end
   end
-   def station_params
-    params.require(:station).permit(:name, :master)
-  end 
-
+  
+  
+  def show
+  end
   def edit
   end
 
   def destroy
-    @station = Station.find(params[:id])
-    @station.destroy
+    @statione = Station.find(params[:id])
+    @statione.destroy
     redirect_to root_url
   end
-  
+  private
+  def user_params
+    params.require(:station).permit(:name, :master)
+  end 
 end
