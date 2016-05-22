@@ -1,2 +1,9 @@
-<h1>Report#show</h1>
-<p>Find me in app/views/report/show.html.erb</p>
+<h1>Отчет по реализации АЗС КОП "АВТОДОРСТРОЙ"</h1>
+<br><br>
+<br><br>
+<br><br>
+<h3> Выберите дату </h3>
+
+<%= select_tag :time,options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
+<%=puts @date %>
+<%=link_to "Просмотреть отчет", reportsearch_path() %> 

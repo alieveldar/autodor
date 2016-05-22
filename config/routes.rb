@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   root 'stations#index'
-  resources :stations
-  get 'edit_stations_path' => 'stations#edit'
-  get 'new_station_path' => 'stations#new'
-  
-
+  delete 'stations/:id' => 'stations#destroy', as: 'delstation'
+  get 'stations' => 'stations#new', as: 'newstation'
+  post 'stations' => 'stations#create', as: 'createstation'
+  get 'reports' => 'reports#index', as: 'reportindex'
+  get 'reports/new' => 'reports#new', as: 'reportnew'
+  post 'reports' => 'reports#create', as: 'savereport'
+  get 'reports/show' => 'reports#show', as: 'showreport'
+  get 'reports/edit' => 'reports#edit', as: 'editreport'
+  get 'reports/search' => 'reports#search', as:'reportsearch'
+ 
 
 	
   # The priority is based upon order of creation: first created -> highest priority.

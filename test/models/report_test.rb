@@ -3,7 +3,7 @@
 # Table name: reports
 #
 #  id                 :integer          not null, primary key
-#  station            :string
+#  station            :integer
 #  f95                :integer
 #  f92                :integer
 #  f80                :integer

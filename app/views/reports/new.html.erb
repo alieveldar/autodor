@@ -1,0 +1,38 @@
+<h1>Ввод суточных данных</h1>
+<p>Введите данные </p>
+<!--<div class="btn-group ">
+  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Действие <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+  <% @station.each do |s| %>
+    <li class="bg-info"><a href= ''><%= s.name %></a></li> 
+    
+    <% end %>
+
+    
+  </ul>
+</div>
+<br> -->
+
+
+
+ <%= form_for :report, url: '/reports' do |f| %>
+      <%= f.select :station, options_from_collection_for_select(Station.all, :id, :name), prompt: "Выберите АЗС" %><br><br>
+
+      <%= f.select :time, options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
+      <%= f.text_field :f95, :placeholder => 'Аи 95' %>
+      <%= f.text_field :f92, :placeholder => 'Аи 92' %>
+      <%= f.text_field :f80, :placeholder => 'А 80' %>
+      <%= f.text_field :fdt, :placeholder => 'Дизельное топливо' %>
+      <%= f.text_field :fgaz, :placeholder => 'ГАЗ' %>
+      <%= f.text_field :magazine, :placeholder => 'Выручка магазина' %>
+      <%= f.text_field :vipcardonstock, :placeholder => 'Вип карты на складе' %>
+      <%= f.text_field :vipcardtreid, :placeholder => 'Продано ВИП карт' %>
+      <%= f.text_field :discountonstock, :placeholder => 'Дисконтные карты на складе' %>
+      <%= f.text_field :discounttreid, :placeholder => 'Продано Дисконтных карт' %>
+      <%= f.text_field :carwasher, :placeholder => 'Мойка - выручка' %>
+      <%= f.text_field :allinstation, :placeholder => 'Общее количество топлива' %><br><br>
+      <%= f.submit "Внести данные", :class => "form-btn" %>
+            
+    <% end %>
+
+

@@ -3,7 +3,7 @@
 # Table name: reports
 #
 #  id                 :integer          not null, primary key
-#  station            :string
+#  station            :integer
 #  f95                :integer
 #  f92                :integer
 #  f80                :integer
@@ -33,54 +33,12 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  station: MyString
-  f95: 1
-  f92: 1
-  f80: 1
-  fdt: 1
-  fgaz: 1
-  magazine: 1
-  vipcardonstock: 1
-  vipcardtreid: 1
-  discountonstock: 1
-  discounttreid: 1
-  carwasher: 1
-  allinstation: 1
-  allf95: 1
-  allf92: 1
-  allf80: 1
-  allfdt: 1
-  allfgaz: 1
-  allmagazine: 1
-  allvipcardonstock: 1
-  allvipcardtreid: 1
-  alldiscountonstock: 1
-  alldiscounttreid: 1
-  allcarwasher: 1
-
-two:
-  station: MyString
-  f95: 1
-  f92: 1
-  f80: 1
-  fdt: 1
-  fgaz: 1
-  magazine: 1
-  vipcardonstock: 1
-  vipcardtreid: 1
-  discountonstock: 1
-  discounttreid: 1
-  carwasher: 1
-  allinstation: 1
-  allf95: 1
-  allf92: 1
-  allf80: 1
-  allfdt: 1
-  allfgaz: 1
-  allmagazine: 1
-  allvipcardonstock: 1
-  allvipcardtreid: 1
-  alldiscountonstock: 1
-  alldiscounttreid: 1
-  allcarwasher: 1
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

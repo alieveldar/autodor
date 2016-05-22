@@ -1,0 +1,7 @@
+<h1>Отчет по реализации</h1>
+<% @reporting.each do |rt| %>
+<tr>
+<td><%=rt.station%></td>
+<td><%=rt.f95%></td>
+<td><%rt.time%></td>
+<% end %>

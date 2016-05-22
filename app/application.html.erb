@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : @sname %></title>
+    <title><%= content_for?(:title) ? yield(:title) : @logotip %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -28,8 +28,24 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td> 
 
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %><td><%= link_to %><td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+ <td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+'Delete', station_path(st), method: :delete  %> </td>
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -38,7 +54,6 @@
   </head>
   <body>
 
-
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -46,18 +61,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">AutodorApp</a>
+        <a class="navbar-brand" href="#">"AutodorApp"</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-
+            <li><%= link_to "Ввод суточных данных", "/path1"  %></li>
+            <li><%= link_to "Ввод данных монитроинга","/path2"  %></li>
+            <li><%= link_to "Сформировать отчет", "/path3"  %></li>
           </ul>
         </div>
       </div>
     </div>
-    
 
     <div class="container">
       <div class="row">

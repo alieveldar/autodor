@@ -1,7 +1,8 @@
 class CreateReports < ActiveRecord::Migration
   def change
     create_table :reports do |t|
-      t.string :station
+    	
+      t.integer :station
       t.integer :f95
       t.integer :f92
       t.integer :f80
@@ -25,8 +26,11 @@ class CreateReports < ActiveRecord::Migration
       t.integer :alldiscountonstock
       t.integer :alldiscounttreid
       t.integer :allcarwasher
-
+      t.date :time
       t.timestamps null: false
+    end
+    def change_table :reports do |t|
+      t.date :time
     end
   end
 end

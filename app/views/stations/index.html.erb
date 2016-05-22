@@ -2,17 +2,17 @@
 
 
 <table border="2px">
-<tbody>rails rus destroy
+<tbody>
 <% @stations.each do |st| %>
 
 <tr>
 
 <td><%= st.name %></td>
 <td><%= st.master %></td>
-<td><%= link_to 'Delete', station_path(st), method: :delete  %> </td>
+<td><%= link_to 'Delete', delstation_path(st), method: :delete, data: {confirm: "Вы уверены?"}  %> </td>
 </tr>
 
 <% end %>
 </tbody>
 </table>
-<h3><solid><%= link_to 'Добавить новый обьект', 'new_station_path' %></solid></h3>
+<h3><solid><%= link_to 'Добавить новый обьект', newstation_path %></solid></h3>
