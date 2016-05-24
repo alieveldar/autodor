@@ -7,9 +7,7 @@ class ReportsController < ApplicationController
   
   end
   def new
-    
-   
-   @station=Station.all
+    @station=Station.all
   	@report = Report.new
   	
   end
@@ -22,14 +20,12 @@ class ReportsController < ApplicationController
     @report= Report.all
 
   end
+
 def search
     @repdate= Report.where(changetime: params[:time])
     @stname
-
-    
-    
- 
 end
+
   def create
     @station = Station.all
     @sts = @stats
@@ -42,15 +38,24 @@ end
         redirect_to :back
       end
   end
+
   private
   def master_params
-    params.require(:report).permit(:station, :f95, :f92,         
-  :f80,              
-  :fdt,              
-  :fgaz,               
- :magazine, 
-  :vipcardonstock,     
-:vipcardtreid,  :discountonstock,    :discounttreid,      :carwasher,  :allinstation, :changetime)
+    params.require(:report).permit(
+      :station, 
+      :f95, 
+      :f92,         
+      :f80,              
+      :fdt,              
+      :fgaz,               
+      :magazine, 
+      :vipcardonstock,     
+      :vipcardtreid,  
+      :discountonstock,    
+      :discounttreid,      
+      :carwasher,  
+      :allinstation, 
+      :changetime)
   end 
   
   
