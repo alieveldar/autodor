@@ -15,14 +15,21 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @date
+    
   end
 
   def edit
     @report= Report.all
 
   end
+def search
+    @repdate= Report.where(changetime: params[:time])
+    @stname
 
+    
+    
+ 
+end
   def create
     @station = Station.all
     @sts = @stats
@@ -43,9 +50,8 @@ class ReportsController < ApplicationController
   :fgaz,               
  :magazine, 
   :vipcardonstock,     
-:vipcardtreid,  :discountonstock,    :discounttreid,      :carwasher,  :allinstation, :time)
+:vipcardtreid,  :discountonstock,    :discounttreid,      :carwasher,  :allinstation, :changetime)
   end 
-  def search
-    @reporting=Report.all
-end
+  
+  
 end

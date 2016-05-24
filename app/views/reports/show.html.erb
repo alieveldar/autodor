@@ -4,6 +4,8 @@
 <br><br>
 <h3> Выберите дату </h3>
 
-<%= select_tag :time,options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
-<%=puts @date %>
-<%=link_to "Просмотреть отчет", reportsearch_path() %> 
+<%= form_tag("/reports/search", method: "get") do %>
+  <%= select_tag :time,options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
+  
+  <%= submit_tag("search") %>
+<% end %>

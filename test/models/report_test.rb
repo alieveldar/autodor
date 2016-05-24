@@ -29,6 +29,7 @@
 #  allcarwasher       :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  changetime         :date
 #
 
 require 'test_helper'

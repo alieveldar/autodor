@@ -1,7 +1,13 @@
 <h1>Отчет по реализации</h1>
-<% @reporting.each do |rt| %>
-<tr>
-<td><%=rt.station%></td>
-<td><%=rt.f95%></td>
-<td><%rt.time%></td>
+
+<% @repdate.each do |t| %>
+<table border="1px">
+	<tr>	
+		<th>Наименоание Азс</th>	<th>Аи95</th>	<th>Аи92</th>	<th>А80</th>	<th>Дт</th>	<th>Итого топлива</th><th>Газ</th><th>Магазин выручка</th><th>Вип карт на складе</th><th>Вип карт продано</th><th>Дисконтных карт на складе</th>	<th>Дисконтных карт продано</th>	<th>Мойка выручка</th>	
+	</tr>
+	<tr>	
+	<% @stname = Station.find_by id:t.station %>
+		<td><%= @stname.name %></td>	<td><%= t.f95 %></td>	<td><%= t.f92 %></td> <td><%= t.f80 %></td> <td><%= t.fdt %></td> <td><%= t.allinstation %></td> <td><%= t.fgaz %></td> <td><%= t.magazine %></td> <td><%= t.vipcardonstock %></td> <td><%= t.vipcardtreid %></td> <td><%= t.discountonstock %></td> <td><%= t.discounttreid %></td> <td><%= t.carwasher %></td> 
+	</tr>
+</table>
 <% end %>
