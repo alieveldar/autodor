@@ -7,5 +7,5 @@
 <%= form_tag("/reports/search", method: "get") do %>
   <%= select_tag :time,options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
   
-  <%= submit_tag("search") %>
+  <%= submit_tag("Показать") %>
 <% end %>

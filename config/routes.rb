@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'stations#index'
+  root 'sessions#index'
   delete 'stations/:id' => 'stations#destroy', as: 'delstation'
   get 'stations' => 'stations#new', as: 'newstation'
   post 'stations' => 'stations#create', as: 'createstation'
@@ -9,6 +9,16 @@ Rails.application.routes.draw do
   get 'reports/show' => 'reports#show', as: 'showreport'
   get 'reports/edit' => 'reports#edit', as: 'editreport'
   get 'reports/search' => 'reports#search', as:'reportsearch'
+  get 'reports/choiceedit' => 'reports#choiceedit', as:'choiceedit'
+  get 'reports' => 'reports#update', as:'updatereport'
+  delete 'reports/:id' => 'reports#destroy', as:'delreport'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
+
+
+  resources :users
  
 
 	

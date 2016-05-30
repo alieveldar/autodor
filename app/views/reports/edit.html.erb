@@ -1,3 +1,57 @@
 
-<h1>Исправление неверно внесенных данных </h1>
-<
+
+
+
+
+
+<h1><font color="#2A6496">Отчет по реализации    <h3><%= params[:time]  %></h3></font></h1>
+
+
+
+
+
+
+
+
+
+
+
+<table class="test" width="200" cellpadding="20" cellspacing="40" border="0">
+	<tr style="border-bottom: 3px solid #808080;">	
+		<th>Наименоание Азс</th>	
+		<th>Аи95</th>	
+		<th>Аи92</th>	
+		<th>А80</th>	
+		<th>Дт</th>	
+		<th>Итого топлива</th>
+		<th>Газ</th>
+		<th>Магазин выручка</th>
+		<th>Вип карт на складе</th>
+		<th>Вип карт продано</th>
+		<th>Дисконтных карт на складе</th>	
+		<th>Дисконтных карт продано</th>	
+		<th>Мойка выручка</th>	
+	</tr>
+<% @repforedit.each do |t| %>
+
+	<tr>	
+	<% @stname = Station.find_by id:t.station %>
+		<td width="150px" align="left" valign="top"><%= @stname.name %></td>	
+		<td width="150px" align="left" valign="top"><%= t.f95 %></td>	
+		<td width="150px" align="left" valign="top"><%= t.f92 %></td> 
+		<td width="150px" align="left" valign="top"><%= t.f80 %></td> 
+		<td width="150px" align="left" valign="top"><%= t.fdt %></td> 
+		<td width="150px" align="left" valign="top"><%= t.allinstation %></td> 
+		<td width="150px" align="left" valign="top"><%= t.fgaz %></td> 
+		<td width="150px" align="left" valign="top"><%= t.magazine %></td> 
+		<td width="150px" align="left" valign="top"><%= t.vipcardonstock %></td> 
+		<td width="150px" align="left" valign="top"><%= t.vipcardtreid %></td> 
+		<td width="150px" align="left" valign="top"><%= t.discountonstock %></td> 
+		<td width="150px" align="left" valign="top"><%= t.discounttreid %></td> 
+		<td width="150px" align="left" valign="top"><%= t.carwasher %></td> 
+		<td><%= link_to "Удалить и внести заново", delreport_path(t), method: :delete, data: {confirm: "Вы уверены?"}  %>
+		<% @timeforheader = t.changetime %>
+	</tr>
+
+<% end %>
+</table>

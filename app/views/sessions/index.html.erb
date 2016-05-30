@@ -1,0 +1,14 @@
+<p>All users</p>
+<table border="5px">
+<tr><th>Айди</th><th>Name</th><th>PASSWORD</th><th>STATIONS</th><th>ROLES</th></tr>
+<%@users.each do |t| %>
+
+<tr>
+<td><%=t.id %></td>
+<td><%=t.name %></td>
+<td><%=t.password %></td>
+<td><%=t.managestations%></td>
+<td><%=t.role%></td>
+</tr>
+<% end %>
+</table>

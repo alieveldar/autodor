@@ -9,6 +9,7 @@ class ReportsController < ApplicationController
   def new
     @station=Station.all
   	@report = Report.new
+
   	
   end
 
@@ -17,14 +18,18 @@ class ReportsController < ApplicationController
   end
 
   def edit
-    @report= Report.all
-
+    @repforedit = Report.where(changetime: params[:time], station: params[:station])
   end
 
-def search
+  def search
     @repdate= Report.where(changetime: params[:time])
-    @stname
-end
+  end
+
+  def choiceedit
+  end
+
+  def update
+  end
 
   def create
     @station = Station.all
@@ -37,6 +42,12 @@ end
       else
         redirect_to :back
       end
+  end
+
+  def destroy
+    @delreport = Report.find(params[:id])
+    @delreport.destroy
+    redirect_to reportnew_path
   end
 
   private

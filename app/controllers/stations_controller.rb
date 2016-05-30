@@ -1,11 +1,13 @@
 class StationsController < ApplicationController
   def index
-	@sname = "КОП АВТОДОРСТРОЙ"
-	@stations = Station.all
+	   @sname = "КОП АВТОДОРСТРОЙ"
+	   @stations = Station.all
   end
+
   def new
     @station = Station.new
   end
+  
   def create
      @station = Station.new(user_params)
       if @station.save
@@ -19,6 +21,7 @@ class StationsController < ApplicationController
   
   def show
   end
+
   def edit
   end
 

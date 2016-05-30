@@ -14,3 +14,31 @@
  *= require_self
  *= require bootstrap_and_overrides
  */@import "bootstrap";
+ .test {
+ border: 0px;
+ 
+}
+.test th {
+ text-align: left;
+ vertical-align: top;
+ font-weight: bold;
+ font-family: Arial, Tahoma;
+ font-size: 10x;
+ color: #222222;
+ padding: 10px;
+}
+.test td {
+ text-align: left;
+ vertical-align: top;
+ font-weight: normal;
+ font-family: Arial, Tahoma;
+ font-size: 12 px;
+ color: #222222;
+ padding: 10px;
+}
+.username{
+	font-size: 20px;
+	font-family: Arial, Tahoma;
+	color: #F31C1C;
+	text-align: right;
+}

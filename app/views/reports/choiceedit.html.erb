@@ -1,3 +1,11 @@
-<h1>Выберите дату исправляемого отчета</h1>
+<h1>Выберите дату и обьект для исправления данных отчета</h1>
 
-<h1>Выберите Азс</h1>
+
+<%= form_tag("/reports/edit", method: "get") do %>
+  <%= select_tag :time,options_for_select([Date.current, Date.today - 1,Date.today - 2, Date.today - 3,Date.today - 4]), prompt: "Выберите дату" %> <br><br>
+  <%= select_tag :station, options_from_collection_for_select(Station.all, :id, :name), prompt: "Выберите АЗС" %>
+  <br>
+  <br>
+  
+  <%= submit_tag("Найти и исправить") %>
+<% end %>
