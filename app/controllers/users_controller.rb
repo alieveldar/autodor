@@ -10,14 +10,14 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to root_url
       else
-        redirect_to signup_url
+        render 'err'
     end
   end 
 
    private 
 
   def user_params
-    params.require(:user).permit(:name, :password, :password_confirmation, :role, :managestations)
+    params.require(:user).permit(:name, :login, :password, :password_confirmation, :role, :managestations)
   end 
 
   

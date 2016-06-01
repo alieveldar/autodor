@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sessions#index'
+  root 'sessions#new'
   delete 'stations/:id' => 'stations#destroy', as: 'delstation'
   get 'stations' => 'stations#new', as: 'newstation'
   post 'stations' => 'stations#create', as: 'createstation'
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#destroy'
-
+  
 
   resources :users
  

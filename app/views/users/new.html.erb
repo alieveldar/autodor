@@ -1,8 +1,15 @@
  <%= form_for :user, url: '/users' do |f| %>
-      <%= f.text_field :name, :placeholder => 'Имя' %>
-      <%= f.password_field :password, :placeholder => 'Пароль' %> 
-      <%= f.password_field :password_confirmation, :placeholder => 'Повторите пароль' %>
-      <%= f.select :managestations, options_from_collection_for_select(Station.all,:id,:name), prompt: "Выберите АЗС" %>
-      <%= f.select :role, options_for_select([['admin',1],['master',2],['mahager',3]]), prompt: "Роль на портале" %>
+      <%= f.text_field :name, :placeholder => 'Имя' %><br><br>
+      
+      <%= f.text_field :login, :placeholder => 'Логин' %><br><br>
+      
+      <%= f.password_field :password, :placeholder => 'Пароль' %> <br><br>
+      
+      <%= f.password_field :password_confirmation, :placeholder => 'Повторите пароль' %><br><br>
+      
+      <%= f.select :managestations, options_from_collection_for_select(Station.all,:id,:name), prompt: "Выберите АЗС" %><br><br>
+      
+      <%= f.select :role, options_for_select([['admin',1],['master',2],['mahager',3]]), prompt: "Роль на портале" %><br><br>
+      
            <%= f.submit "Регистрация", :class => "form-btn" %>
     <% end %>

@@ -40,7 +40,7 @@ class ReportsController < ApplicationController
         #sesion[:user_id] = @user.id
         render "ok"
       else
-        redirect_to :back
+        render "users/err"
       end
   end
 
@@ -48,6 +48,9 @@ class ReportsController < ApplicationController
     @delreport = Report.find(params[:id])
     @delreport.destroy
     redirect_to reportnew_path
+  end
+
+  def info
   end
 
   private

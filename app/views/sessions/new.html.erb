@@ -1,6 +1,6 @@
 
     <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.select :name, options_from_collection_for_select(User.all, :id, :name), prompt: "Пользователь" %><br>
+      <%= f.text_field :login, :placeholder => 'Логин' %><br>
  		
       <%= f.password_field :password, :placeholder => 'Пароль' %>
       <br>

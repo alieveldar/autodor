@@ -38,36 +38,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Автодорстрой</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Ввод суточных данных реализации АЗС", reportindex_path  %></li>
-            <li><%= link_to "Исправить неверно внесенные данные", choiceedit_path %></li>
-           <!-- <li><%= link_to "Link3", "/path3"  %></li> -->
-            <li><%= link_to "Формирование суточного отчета АЗС", showreport_path %></li>
-             <% if current_user %>
-          
-            <li class="username"><%= current_user.name %></li>
-            <li class="username"><%= link_to "Выход", :controller => "sessions", :action => "destroy"%></li>
-
-            
-          </ul>
-        <% else %>
-          
-            <li class="username"><%= link_to "Войти", login_path %></a></li>
-           </ul> 
-        <% end %>
-          
-        </div>
-      </div>
-    </div>
+    
 
     <div class="container">
       <div class="row">

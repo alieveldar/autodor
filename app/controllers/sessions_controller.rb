@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  layout:false
 	def index
 		@users = User.all
 	end
@@ -7,13 +8,13 @@ class SessionsController < ApplicationController
   	end 
 
   def create
-    puts params[:id]
-    user = User.find_by(params[:session][:id])
+    puts params[:login]
+    user = User.where(login:params[:session][:login]).first
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to root_url
+      render 'reports/info'
     else
-      redirect_to login_url
+      render 'sessions/logerror'
     end 
   end 
 
