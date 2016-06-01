@@ -29,8 +29,6 @@ class CreateReports < ActiveRecord::Migration
       t.date :time
       t.timestamps null: false
     end
-    def change_table :reports do |t|
-      t.date :time
-    end
+    
   end
 end
