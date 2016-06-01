@@ -20,5 +20,5 @@ Report.create!( station:2,       f95:222,
   discounttreid: 123,      
   carwasher:  2321,          
   allinstation: 40000,       
-  changetime: 2016-05-23)   
+  changetime: "2016-05-23")   
   User.create!(name:'Admin',login:'admin',role:'admin',password:123456,)      
