@@ -1,6 +1,7 @@
 
 Station.destroy_all
 Report.destroy_all
+User.destroy_all
 Station.create!(name:'Аделя Кутуя номер 31', master:'Мифтахов')
 Station.create!(name:'Родиина номер 15', master:'Мифтахов')
 Station.create!(name:'Проспект победы номер 9', master:'Мифтахов')
@@ -19,4 +20,5 @@ Report.create!( station:2,       f95:222,
   discounttreid: 123,      
   carwasher:  2321,          
   allinstation: 40000,       
-  changetime: 2016-05-23)         
+  changetime: 2016-05-23)   
+  User.create!(name:'Admin',login:'admin',role:'admin',password:123456,)      
