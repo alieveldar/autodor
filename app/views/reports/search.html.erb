@@ -37,7 +37,7 @@
 	<tr>	
 	<% @stname = Station.find_by id:t.station %>
 		<td width="150px" align="left" valign="top"><%= @stname.name %></td>	
-		<td width="150px" align="left" valign="top"><%= t.f95 %></td>	
+		<td width="150px" align="left" valign="top"><%= t.f95 %></td>	<%(@allf95 + t.f95) %>
 		<td width="150px" align="left" valign="top"><%= t.f92 %></td> 
 		<td width="150px" align="left" valign="top"><%= t.f80 %></td> 
 		<td width="150px" align="left" valign="top"><%= t.fdt %></td> 
@@ -49,8 +49,9 @@
 		<td width="150px" align="left" valign="top"><%= t.discountonstock %></td> 
 		<td width="150px" align="left" valign="top"><%= t.discounttreid %></td> 
 		<td width="150px" align="left" valign="top"><%= t.carwasher %></td> 
-		<% @timeforheader = t.changetime %>
+		
 	</tr>
 
 <% end %>
+
 </table>

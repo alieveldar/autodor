@@ -22,7 +22,8 @@ class ReportsController < ApplicationController
   end
 
   def search
-    @repdate= Report.where(changetime: params[:time])
+    @repdate= Report.where(changetime: params[:time],deleted_at: nil)
+    @allf95
   end
 
   def choiceedit
@@ -51,6 +52,9 @@ class ReportsController < ApplicationController
   end
 
   def info
+  end
+
+  def download
   end
 
   private

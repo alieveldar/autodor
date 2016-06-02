@@ -30,9 +30,11 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  changetime         :date
+#  deleted_at         :datetime
 #
 
 class Report < ActiveRecord::Base
+	acts_as_paranoid
 	validates :f95, numericality: { only_integer: true }
 	validates :f92, numericality: { only_integer: true }
 	validates :f80, numericality: { only_integer: true }

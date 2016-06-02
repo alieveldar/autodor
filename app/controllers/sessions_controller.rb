@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  layout:false
+  layout "auth"
 	def index
 		@users = User.all
 	end
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     user = User.where(login:params[:session][:login]).first
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      render 'reports/info'
+      render 'reports/info' 
     else
       render 'sessions/logerror'
     end 
