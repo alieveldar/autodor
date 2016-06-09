@@ -37,7 +37,7 @@
 	<tr>	
 	<% @stname = Station.find_by id:t.station %>
 		<td width="150px" align="left" valign="top"><%= @stname.name %></td>	
-		<td width="150px" align="left" valign="top"><%= t.f95 %></td>	<%(@allf95 + t.f95) %>
+		<td width="150px" align="left" valign="top"><%= t.f95 %></td>	
 		<td width="150px" align="left" valign="top"><%= t.f92 %></td> 
 		<td width="150px" align="left" valign="top"><%= t.f80 %></td> 
 		<td width="150px" align="left" valign="top"><%= t.fdt %></td> 
@@ -53,5 +53,23 @@
 	</tr>
 
 <% end %>
+<tr>
+<td width="150px" align="left" valign="top">Итого</td>
+<td width="150px" align="left" valign="top"><%= @all95 %></td>
+<td width="150px" align="left" valign="top"><%= @all92 %></td>
+<td width="150px" align="left" valign="top"><%= @all80 %></td>
+<td width="150px" align="left" valign="top"><%= @alldt %></td>
+<td width="150px" align="left" valign="top"><%= @allfuel %></td>
+<td width="150px" align="left" valign="top"><%= @allgaz %></td>
+<td width="150px" align="left" valign="top"><%= @allmagazine %></td>
+<td width="150px" align="left" valign="top"><***></td>
+<td width="150px" align="left" valign="top"><***></td>
+<td width="150px" align="left" valign="top"><***></td>
+<td width="150px" align="left" valign="top"><***></td>
+<td width="150px" align="left" valign="top"><***></td>
+
+</tr>
+	
+
 
 </table>
