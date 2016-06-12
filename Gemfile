@@ -15,6 +15,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rollbar'
 gem 'rails_12factor'
 gem 'paranoia', '~> 2.1', '>= 2.1.5'
+gem 'rubyzip', '= 1.0.0'
+gem 'axlsx', '= 2.0.1'
+gem 'axlsx_rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

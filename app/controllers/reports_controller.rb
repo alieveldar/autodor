@@ -22,7 +22,8 @@ class ReportsController < ApplicationController
   end
 
   def search
-    @repdate= Report.where(changetime: params[:time],deleted_at: nil)
+    @repdate= Report.where(changetime: params[:time])
+    @checkdate = (params[:time]).to_date
 
     @all95 = @repdate.map(&:f95).inject(&:+) 
     @all92 = @repdate.map(&:f92).inject(&:+)
@@ -31,7 +32,7 @@ class ReportsController < ApplicationController
     @allfuel = @repdate.map(&:allinstation).inject(&:+)
     @allgaz = @repdate.map(&:fgaz).inject(&:+)
     @allmagazine = @repdate.map(&:magazine).inject(&:+)
-    
+
 
       
     
