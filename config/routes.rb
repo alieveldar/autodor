@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#destroy'
   get 'download' => 'reports#download'
+  get 'print' => 'reports#print'
   
 
   resources :users

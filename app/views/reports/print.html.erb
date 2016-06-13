@@ -2,9 +2,9 @@
 
 
 
+<title>Коп Автодорстрой</title>
 
-
-<h1><font color="#2A6496">Отчет по реализации  за  <h3><%= @checkdate - 1  %></h3></font></h1>
+<h1><font color="#2A6496">Отчет по реализации на объектах КОП "Автодорстрой" за  <h3><%= (@checkdate - 1)  %></h3></font></h1>
 
 
 
@@ -74,4 +74,3 @@
 
 </table>
 
-<h2><%= link_to "Версия для печати", :controller => "reports", :action => "print", :time => @checkdate %></h2>
