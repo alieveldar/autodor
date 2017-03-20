@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'road_list/new'
+
+  get 'road_list/past'
+
   root 'sessions#new'
   delete 'stations/:id' => 'stations#destroy', as: 'delstation'
   get 'stations' => 'stations#new', as: 'newstation'
