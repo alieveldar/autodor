@@ -1,7 +1,16 @@
 class RoadListController < ApplicationController
+  def index
+  end
+
   def new
   end
 
-  def past
+  def delete
+  end
+
+  def print
+  end
+
+  def download
   end
 end

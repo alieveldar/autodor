@@ -79,7 +79,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+mrx  <<: *default
   database: autodor_app_production
-  username: mrx
+  username: autodor_app
   password: <%= ENV['AUTODOR_APP_DATABASE_PASSWORD'] %>

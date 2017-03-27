@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-03-27
+  timeout: MyText
+  timein: MyText
+  fuelout: 1
+  fuelin: 1
+  cardcredit: 1
+  fuelnorm: 1
+  fuelfakt: 1
+  odometr: 1
+  maping: MyText
+
+two:
+  date: 2017-03-27
+  timeout: MyText
+  timein: MyText
+  fuelout: 1
+  fuelin: 1
+  cardcredit: 1
+  fuelnorm: 1
+  fuelfakt: 1
+  odometr: 1
+  maping: MyText

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'road_list/index'
+
+  get 'road_list/new'
+
+  get 'road_list/delete'
+
+  get 'road_list/print'
+
+  get 'road_list/download'
+
   get 'road_list/new'
 
   get 'road_list/past'
