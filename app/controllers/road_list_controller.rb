@@ -1,5 +1,6 @@
 class RoadListController < ApplicationController
   def index
+    @lists = Road_list.all
   end
 
   def new
