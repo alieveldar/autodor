@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :day_road_lists
   get 'road_list/index'
 
   get 'road_list/new'

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2017-04-08
+  fuel: 1
+  station: 1
+
+two:
+  day: 2017-04-08
+  fuel: 1
+  station: 1

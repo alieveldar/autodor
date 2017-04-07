@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @day_road_list.day %>
+</p>
+
+<p>
+  <strong>Fuel:</strong>
+  <%= @day_road_list.fuel %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @day_road_list.station %>
+</p>
+
+<%= link_to 'Edit', edit_day_road_list_path(@day_road_list) %> |
+<%= link_to 'Back', day_road_lists_path %>

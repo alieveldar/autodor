@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Day Road Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Fuel</th>
+      <th>Station</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @day_road_lists.each do |day_road_list| %>
+      <tr>
+        <td><%= day_road_list.day %></td>
+        <td><%= day_road_list.fuel %></td>
+        <td><%= day_road_list.station %></td>
+        <td><%= link_to 'Show', day_road_list %></td>
+        <td><%= link_to 'Edit', edit_day_road_list_path(day_road_list) %></td>
+        <td><%= link_to 'Destroy', day_road_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Day road list', new_day_road_list_path %>
