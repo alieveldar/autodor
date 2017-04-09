@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :day %><br>
-    <%= f.date_select :day %>
+    <%= f.date_select :day %> 
+    
   </div>
   <div class="field">
     <%= f.label :fuel %><br>
@@ -21,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :station %><br>
-    <%= f.number_field :station %>
+    <%= f.select :station, options_from_collection_for_select(Station.all, :id, :name), prompt: "Выберите АЗС" %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,5 +1,5 @@
 class DayRoadListsController < ApplicationController
-  #before_action :set_day_road_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_day_road_list, only: [:show, :edit, :update, :destroy]
 
   # GET /day_road_lists
   # GET /day_road_lists.json
@@ -26,6 +26,7 @@ class DayRoadListsController < ApplicationController
   # POST /day_road_lists
   # POST /day_road_lists.json
   def create
+    
     @day_road_list = DayRoadList.new(day_road_list_params)
 
     respond_to do |format|
@@ -56,7 +57,7 @@ class DayRoadListsController < ApplicationController
   # DELETE /day_road_lists/1
   # DELETE /day_road_lists/1.json
   def destroy
-    @day_road_list.destroy
+    @day_road_list.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to day_road_lists_url, notice: 'Day road list was successfully destroyed.' }
       format.json { head :no_content }
@@ -66,7 +67,7 @@ class DayRoadListsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_day_road_list
-    #@day_road_list = DayRoadList.find(params[:id])
+    @day_road_list = DayRoadList.find(params[:id])
     @day_road_list = DayRoadList.all
 
   
