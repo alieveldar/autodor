@@ -1,5 +1,5 @@
 class DayRoadListsController < ApplicationController
-  before_action :set_day_road_list, only: [:show, :edit, :update, :destroy]
+  #before_action :set_day_road_list, only: [:show, :edit, :update, :destroy]
 
   # GET /day_road_lists
   # GET /day_road_lists.json
@@ -7,9 +7,11 @@ class DayRoadListsController < ApplicationController
     @day_road_lists = DayRoadList.all
   end
 
+
   # GET /day_road_lists/1
   # GET /day_road_lists/1.json
   def show
+    @day_road_lists = DayRoadList.all
   end
 
   # GET /day_road_lists/new
@@ -64,8 +66,11 @@ class DayRoadListsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_day_road_list
-      @day_road_list = DayRoadList.find(params[:id])
-    end
+    #@day_road_list = DayRoadList.find(params[:id])
+    @day_road_list = DayRoadList.all
+
+  
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def day_road_list_params
