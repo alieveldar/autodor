@@ -23,6 +23,7 @@ Report.create!( station:2,       f95:222,
   changetime: "2016-05-23")   
   User.create!(name:'Admin',login:'admin',role:'admin',password:123456,)      
 =end
+=begin
 DayRoadList.destroy_all
 DayRoadList.create!(day: '2017-04-09', fuel: 10, station: 31)
 DayRoadList.create!(day: '2017-04-19', fuel: 11, station: 31)
@@ -524,3 +525,4 @@ DayRoadList.create!(day: '2030-11-07', fuel: 506, station: 31)
 DayRoadList.create!(day: '2030-11-17', fuel: 507, station: 31)
 DayRoadList.create!(day: '2030-11-27', fuel: 508, station: 31)
 DayRoadList.create!(day: '2030-12-07', fuel: 509, station: 31)
+=end

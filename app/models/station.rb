@@ -7,6 +7,7 @@
 #  master     :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  distance   :decimal(, )
 #
 
 class Station < ActiveRecord::Base
