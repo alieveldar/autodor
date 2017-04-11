@@ -4,5 +4,6 @@
  <%= form_for :station, url: '/stations' do |f| %>
       <%= f.text_field :name, :placeholder => 'Наименование обьекта' %>
       <%= f.text_field :master, :placeholder => 'Ответственный мастер АЗС' %>
+      <%= f.text_field :distance, :placeholder => 'Расстояние от офиса' %>
       <%= f.submit "Добавить", :class => "form-btn" %>
     <% end %>

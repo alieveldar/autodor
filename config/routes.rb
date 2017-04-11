@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   delete 'stations/:id' => 'stations#destroy', as: 'delstation'
   get 'stations' => 'stations#new', as: 'newstation'
+  get 'stations/index' => 'stations#index', as: 'stationsindex'
   post 'stations' => 'stations#create', as: 'createstation'
   get 'reports' => 'reports#index', as: 'reportindex'
   get 'reports/new' => 'reports#new', as: 'reportnew'

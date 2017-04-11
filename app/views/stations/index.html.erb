@@ -1,17 +1,13 @@
-<h1><%= @sname %></h1>
 
-
-<table border="2px">
-<tbody>
-<% @stations.each do |st| %>
-
-<tr>
-
-<td><%= st.name %></td>
-<td><%= st.master %></td>
-<td><%= link_to 'Delete', delstation_path(st), method: :delete, data: {confirm: "Вы уверены?"}  %> </td>
-</tr>
-
+<table border="4", cellspacing="4", rules="all">
+ <tbody>
+  <% @stationes.each do |st| %>
+  <tr>
+   <td><%= st.name %></td>
+   <td><%= st.master %></td>
+   <td><%= st.distance %></td>
+   <td><%= link_to 'Delete', delstation_path(st), method: :delete, data: {confirm: "Вы уверены?"} %></td>
+ </tr>
 <% end %>
 </tbody>
 </table>
