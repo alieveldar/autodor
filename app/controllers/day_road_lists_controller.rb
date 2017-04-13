@@ -31,8 +31,8 @@ class DayRoadListsController < ApplicationController
 
     respond_to do |format|
       if @day_road_list.save
-        format.html { redirect_to @day_road_list, notice: 'Day road list was successfully created.' }
-        format.json { render :show, status: :created, location: @day_road_list }
+        format.html { redirect_to @day_road_list, notice: 'Данные добавлены' }
+        format.json { render :index,  location: @day_road_list }
       else
         format.html { render :new }
         format.json { render json: @day_road_list.errors, status: :unprocessable_entity }

@@ -4,5 +4,7 @@
 <li><%= link_to "Ввод суточных данных АЗС", reportindex_path  %><br></li>
 <li><%=link_to "Исправить неверно внесенные данные", choiceedit_path %><br></li>
 <li><%= link_to "Сформировать суточный отчет", showreport_path  %> <br></li>
+<li><%= link_to "Управление АЗС", :controller => "stations", :action => "index" %></li>
+<li><%= link_to "Заправочные данные", :controller => "day_road_lists", :action => "index" %></li>
 </ul>
 </div>
