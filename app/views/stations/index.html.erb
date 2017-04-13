@@ -1,6 +1,12 @@
 
 <table border="4", cellspacing="4", rules="all">
  <tbody>
+ <tr>
+    <th>Наименование АЗС</th>
+    <th>Управляющее лицо</th>
+    <th>Удаленность</th>
+    <th></th>
+   </tr>
   <% @stationes.each do |st| %>
   <tr>
    <td><%= st.name %></td>
