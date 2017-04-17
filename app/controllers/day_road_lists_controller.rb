@@ -5,13 +5,16 @@ class DayRoadListsController < ApplicationController
   # GET /day_road_lists.json
   def index
     @day_road_lists = DayRoadList.all
+    
   end
 
 
   # GET /day_road_lists/1
   # GET /day_road_lists/1.json
   def show
-    @day_road_lists = DayRoadList.all
+    @stid = @day_road_listid.station
+    @stname = Station.find(@stid)
+    @stn = @stname.name
   end
 
   # GET /day_road_lists/new
@@ -57,7 +60,7 @@ class DayRoadListsController < ApplicationController
   # DELETE /day_road_lists/1
   # DELETE /day_road_lists/1.json
   def destroy
-    @day_road_list.destroy(params[:id])
+    @day_road_listing.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to day_road_lists_url, notice: 'Day road list was successfully destroyed.' }
       format.json { head :no_content }
@@ -67,11 +70,9 @@ class DayRoadListsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_day_road_list
-    @day_road_list = DayRoadList.find(params[:id])
-    @day_road_list = DayRoadList.all
-
-  
-  end
+      @day_road_listid = DayRoadList.find(params[:id])
+      @day_road_listing = DayRoadList.all
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def day_road_list_params

@@ -1,0 +1,44 @@
+            Prefix Verb   URI Pattern                        Controller#Action
+    day_road_lists GET    /day_road_lists(.:format)          day_road_lists#index
+                   POST   /day_road_lists(.:format)          day_road_lists#create
+ new_day_road_list GET    /day_road_lists/new(.:format)      day_road_lists#new
+edit_day_road_list GET    /day_road_lists/:id/edit(.:format) day_road_lists#edit
+     day_road_list GET    /day_road_lists/:id(.:format)      day_road_lists#show
+                   PATCH  /day_road_lists/:id(.:format)      day_road_lists#update
+                   PUT    /day_road_lists/:id(.:format)      day_road_lists#update
+                   DELETE /day_road_lists/:id(.:format)      day_road_lists#destroy
+   road_list_index GET    /road_list/index(.:format)         road_list#index
+     road_list_new GET    /road_list/new(.:format)           road_list#new
+  road_list_delete GET    /road_list/delete(.:format)        road_list#delete
+   road_list_print GET    /road_list/print(.:format)         road_list#print
+road_list_download GET    /road_list/download(.:format)      road_list#download
+                   GET    /road_list/new(.:format)           road_list#new
+    road_list_past GET    /road_list/past(.:format)          road_list#past
+              root GET    /                                  sessions#new
+        delstation DELETE /stations/:id(.:format)            stations#destroy
+        newstation GET    /stations(.:format)                stations#new
+     stationsindex GET    /stations/index(.:format)          stations#index
+     createstation POST   /stations(.:format)                stations#create
+       reportindex GET    /reports(.:format)                 reports#index
+         reportnew GET    /reports/new(.:format)             reports#new
+        savereport POST   /reports(.:format)                 reports#create
+        showreport GET    /reports/show(.:format)            reports#show
+        editreport GET    /reports/edit(.:format)            reports#edit
+      reportsearch GET    /reports/search(.:format)          reports#search
+        choiceedit GET    /reports/choiceedit(.:format)      reports#choiceedit
+      updatereport GET    /reports(.:format)                 reports#update
+         delreport DELETE /reports/:id(.:format)             reports#destroy
+             login GET    /login(.:format)                   sessions#new
+                   POST   /login(.:format)                   sessions#create
+            logout DELETE /logout(.:format)                  sessions#destroy
+                   GET    /logout(.:format)                  sessions#destroy
+          download GET    /download(.:format)                reports#download
+             print GET    /print(.:format)                   reports#print
+             users GET    /users(.:format)                   users#index
+                   POST   /users(.:format)                   users#create
+          new_user GET    /users/new(.:format)               users#new
+         edit_user GET    /users/:id/edit(.:format)          users#edit
+              user GET    /users/:id(.:format)               users#show
+                   PATCH  /users/:id(.:format)               users#update
+                   PUT    /users/:id(.:format)               users#update
+                   DELETE /users/:id(.:format)               users#destroy

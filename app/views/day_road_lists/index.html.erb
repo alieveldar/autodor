@@ -1,6 +1,6 @@
 <!--<p id="notice"><%= notice %></p> -->
 
-<h1>Список поданных данных</h1>
+<h1>Список поданных данных index</h1>
 
 <table border="3", align="top", cellpadding="30", cellspacing="10">
   <thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= day_road_list.day %></td>
         <td><%= day_road_list.fuel %></td>
-        <td><%= day_road_list.station %></td>
+        <td><%= (Station.find(day_road_list.station)).name %></td>
         <td><%= link_to 'Show', day_road_list %></td>
         <td><%= link_to 'Edit', edit_day_road_list_path(day_road_list) %></td>
         <td><%= link_to 'Destroy', day_road_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

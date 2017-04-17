@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
 	end
 	def new
     if session[:user_id] != nil
-        destroy
+        #destroy
+        render 'reports/info'
       end
 
   	end 
