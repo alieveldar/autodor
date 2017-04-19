@@ -5,14 +5,14 @@
 <table border="4", cellspacing="4", rules="all">
  <tbody>
  	<tr>
- 	<th>#</th>
+ 	<th align="center">#</th>
  	<th>-----AZS------</th>
  	<th>-----CHK------</th>
  	</tr>
  
   <% @stations.each do |st| %>
   <tr>
-  	<td><%= @count %>
+  	<td align="center"><%= @count %>
    <td align="center"><%= st.name %></td>
    <% @count = @count + 1 %>
    <td align="center"><%= check_box_tag(:pet_dog) %></td>
