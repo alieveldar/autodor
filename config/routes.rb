@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'checklist/index'
+
+  get 'checklist/new'
+
   resources :day_road_lists
 
   
