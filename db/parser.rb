@@ -5,7 +5,7 @@ data = Date.today
 @stat = 1
 @fuel = 10
 @n.times do
-  file.puts "DayRoadList.create!(day: " + "'" + data.to_s + "'" + ", fuel: " + @fuel.to_s + ", station: 31)"
+  file.puts "DayRoadList.create!("day: " + "'" + data.to_s + "'" + ", fuel: " + @fuel.to_s + ", station: 31)"
   @fuel = @fuel + 1
   data = data + 10
 end
