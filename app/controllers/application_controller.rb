@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   def logotip
 	@logotip = 'ТАИФ-НК АЗС'
   end
+
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -10,7 +12,12 @@ class ApplicationController < ActionController::Base
  
    def current_user
      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+
    end 
+   helper_method :urole
+   def urole
+    @urole = current_user.role
+  end
 
    def require_user
      redirect_to 'login_path' unless current_user

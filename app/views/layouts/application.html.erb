@@ -58,6 +58,7 @@
              <% if current_user %>
           
             <li class="username"><%= current_user.name %></li>
+            
             <li class="username"><%= link_to "Выход", :controller => "sessions", :action => "destroy"%></li>
 
             

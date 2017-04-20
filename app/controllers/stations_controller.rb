@@ -1,5 +1,11 @@
 class StationsController < ApplicationController
   def index
+   if (urole == "1")
+        #destroy
+          #redirect_to stationsindex_path
+      else
+          render 'sessions/logerror'
+      end
 	   @sname = "КОП АВТОДОРСТРОЙ"
 	   @stationes = Station.all
   end
