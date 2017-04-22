@@ -12,18 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :day %><br>
+    <%= f.label 'ДЕНЬ' %><br>
     <%= f.date_select :day %> 
-    
-  </div>
+    </div>
+
   <div class="field">
-    <%= f.label :fuel %><br>
+    <%= f.label 'ОБЬЕМ' %><br>
     <%= f.number_field :fuel %>
   </div>
   <div class="field">
-    <%= f.label :station %><br>
+    <%= f.label 'АЗС' %><br>
     <%= f.select :station, options_from_collection_for_select(Station.all, :id, :name), prompt: "Выберите АЗС" %>
+
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
