@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get 'road_list/index'
 
-  get 'road_list/new'
+  post 'road_list/new'
 
   get 'road_list/delete'
 
@@ -17,9 +17,12 @@ Rails.application.routes.draw do
 
   get 'road_list/download'
 
-  get 'road_list/new'
+  
 
-  get 'road_list/past'
+ 
+
+
+
 
   root 'sessions#new'
   delete 'stations/:id' => 'stations#destroy', as: 'delstation'

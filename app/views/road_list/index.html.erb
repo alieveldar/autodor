@@ -2,11 +2,10 @@
  
  <br>
  <br>
- <%= select_month(Date.today.month - 1) %>
+ 
  <br>
  <br>
- <p> Выбирете дни не входящие в состав путевого листа </p>
-<br>
+ 
 <br>
 <style>
 #calendar3 {
@@ -106,3 +105,22 @@ document.querySelector('#calendar3').onchange = function Kalendar3() {
   Calendar3("calendar3",document.querySelector('#calendar3 input').value,parseFloat(document.querySelector('#calendar3 select').options[document.querySelector('#calendar3 select').selectedIndex].value));
 }
 </script>
+<br>
+<br>
+
+<%= form_tag("/road_list/new", method: "post") do %>
+<p> Отчетный год </p>
+<%= select_tag(:year , options_for_select([[Date.today.year],[Date.today.year - 1]])) %>
+<p> Выберите отчетный месяц </p>
+<%= select_tag(:month, options_for_select([[Date.today.month],[Date.today.month - 1],[Date.today.month - 2]])) %>
+ <br>
+ <br>
+ <p> Введите дни не входящие в состав путевого листа,вводить через пробел </p>
+<br>
+<%= text_field_tag(:days) %>
+<br>
+<br>
+
+
+<%= submit_tag("Передать данные для расчета") %>
+<% end %>
