@@ -11,7 +11,8 @@ class RoadListController < ApplicationController
     @daycount = @days.length
     @excludeddates = Array.new
     @days = @days.map(&:to_i).reject{ |x|  (x > 31 || x < 0) }.map{ |x| @year + ',' + @month + ',' + (x).to_s}
-  
+    
+    
   end
 
   def create
