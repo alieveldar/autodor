@@ -10,16 +10,11 @@ class RoadListController < ApplicationController
     @year = (params[:year])
     @daycount = @days.length
     @excludeddates = Array.new
-    
-     
-    @days.each do |day| {
-      if day >= 31
-        a = ((@year) + "-" + (@month) + "-" (day))
-        @excludeddates << a
-      else
-        puts "OK"
-      end
-        }
+    @days = @days.map(&:to_i).reject{ |x|  (x > 31 || x < 0) }.map{ |x| @year + ',' + @month + ',' + (x).to_s}
+  
+  end
+
+  def create
   end
 
   def delete
@@ -30,4 +25,7 @@ class RoadListController < ApplicationController
 
   def download
   end
+    
+    
+  
 end
