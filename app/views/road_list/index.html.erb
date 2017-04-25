@@ -120,7 +120,16 @@ document.querySelector('#calendar3').onchange = function Kalendar3() {
 <%= text_field_tag(:days) %>
 <br>
 <br>
+<p>Введите начальный пробег</p>
+<br>
+<%= text_field_tag(:startodometr)%>
+<br>
+<br>
+<p> Введите начальное колличество литров в баке </p>
+<br>
+<%= text_field_tag(:startfuellitres) %>
 
-
+<br>
+<br>
 <%= submit_tag("Передать данные для расчета") %>
 <% end %>
