@@ -9,16 +9,20 @@ class RoadListController < ApplicationController
     @days = ((params[:days]).split(' '))
     @year = (params[:year])
     
-    
-    @days = @days.map(&:to_i).reject{ |x|  (x > 31 || x < 0) }.map{ |x| @year + ',' + @month + ',' + (x).to_s}
+    @lastmonthday = (@year + '-' + @month + '-' + '1')
+    @lastmonthday = Date.strptime(@lastmonthday, '%Y-%m-%d')
+    @lastmonthday = @lastmonthday.end_of_month
+    @lastmonthday = @lastmonthday.day
+    @days = @days.map(&:to_i).reject{ |x|  (x > @lastmonthday || x < 0) }
+    @days = @days.map{ |x| Date.strptime((@year + '-' + @month + '-' + x.to_s), '%Y-%m-%d')}
     @startodometr = (params[:startodometr]).to_i #первоначальные стартовые километры одометра
     @startfuellitres = (params[:startfuellitres]).to_i #первоначальные литры
-    #d.end_of_month
     @daycount = @days.length
-    @excludeddates = Array.new
-    @excludeddates 
+    @excludeddates = Array.new(size = @daycount, obj = nil) 
+    @excludeddates = @days #исключительные дни
+
     
-    #@excludeddates.map!{ |x| x.to_i}
+    
 
     
   end
