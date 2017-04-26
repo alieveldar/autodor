@@ -1,7 +1,6 @@
 class RoadListController < ApplicationController
   def index
-    @lists = RoadList.all
-    @dateforchoose 
+    
   end
 
   def new
@@ -9,7 +8,7 @@ class RoadListController < ApplicationController
     @days = ((params[:days]).split(' '))
     @year = (params[:year])
     
-    @lastmonthday = (@year + '-' + @month + '-' + '1')
+    @lastmonthday = (@year + '-' + @month + '-' + '1') 
     @lastmonthday = Date.strptime(@lastmonthday, '%Y-%m-%d')
     @lastmonthday = @lastmonthday.end_of_month
     @lastmonthday = @lastmonthday.day
