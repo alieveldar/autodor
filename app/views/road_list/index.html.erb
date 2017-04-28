@@ -123,12 +123,15 @@ document.querySelector('#calendar3').onchange = function Kalendar3() {
 <p>Введите начальный пробег</p>
 <br>
 <%= text_field_tag(:startodometr)%>
+<%= check_box_tag(:check_startodometr) %>
+<%= label_tag(:check_startodometr, "Взять данные из предыдущего месяца") %>
 <br>
 <br>
 <p> Введите начальное колличество литров в баке </p>
 <br>
 <%= text_field_tag(:startfuellitres) %>
-
+<%= check_box_tag(:check_startfuellitres) %>
+<%= label_tag(:check_startfuellitres, "Взять данные из предыдущего месяца") %>
 <br>
 <br>
 <%= submit_tag("Передать данные для расчета") %>
