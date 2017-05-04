@@ -4,6 +4,7 @@ class RoadListController < ApplicationController
   end
 
   def new
+=begin
     @month = (params[:month])
     @days = ((params[:days]).split(' '))
     @year = (params[:year])
@@ -19,7 +20,7 @@ class RoadListController < ApplicationController
     @daycount = @days.length
     @excludeddates = Array.new(size = @daycount, obj = nil) 
     @excludeddates = @days #исключительные дни
-
+=end
     
     
 
