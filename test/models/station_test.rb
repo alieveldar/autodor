@@ -8,6 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  distance   :integer
+#  outcity    :integer
 #
 
 require 'test_helper'
