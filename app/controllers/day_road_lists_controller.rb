@@ -4,8 +4,8 @@ class DayRoadListsController < ApplicationController
   # GET /day_road_lists
   # GET /day_road_lists.json
   def index
-    @day_road_lists = DayRoadList.all
-    
+  #  @day_road_lists = DayRoadList.all.sort_by(&:day)
+   @day_road_lists = DayRoadList.all.order(day: :asc)
   end
 
 
