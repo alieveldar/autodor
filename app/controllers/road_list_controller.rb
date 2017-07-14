@@ -20,7 +20,7 @@ class RoadListController < ApplicationController
     @daycount = @days.length
     @excludeddates = Array.new(size = @daycount, obj = nil) 
     @excludeddates = @days #исключительные дни
-=end
+
     @month = (params[:month])
     @days = ((params[:days]).split(' '))
     @year = (params[:year])
@@ -37,6 +37,8 @@ class RoadListController < ApplicationController
     @check_startfuellitres = check_startfuellitres
     
     сделай класс с полями равными полям бд
+
+=end
     
 
     
