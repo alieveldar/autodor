@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @cartridge_transfer.model %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @cartridge_transfer.count %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cartridge_transfer.date %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @cartridge_transfer.department %>
+</p>
+
+<p>
+  <strong>Person out:</strong>
+  <%= @cartridge_transfer.person_out %>
+</p>
+
+<p>
+  <strong>Person in:</strong>
+  <%= @cartridge_transfer.person_in %>
+</p>
+
+<%= link_to 'Edit', edit_cartridge_transfer_path(@cartridge_transfer) %> |
+<%= link_to 'Back', cartridge_transfers_path %>

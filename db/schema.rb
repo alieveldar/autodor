@@ -11,10 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418101115) do
+ActiveRecord::Schema.define(version: 20171019074411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cartages", force: :cascade do |t|
+    t.string   "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cartridge_supplies", force: :cascade do |t|
+    t.integer  "model"
+    t.integer  "count"
+    t.integer  "state"
+    t.date     "date"
+    t.string   "service"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cartridge_transfers", force: :cascade do |t|
+    t.integer  "model"
+    t.integer  "count"
+    t.date     "date"
+    t.text     "department"
+    t.integer  "person_out"
+    t.text     "person_in"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cartridges", force: :cascade do |t|
+    t.string   "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "day_road_lists", force: :cascade do |t|
     t.date     "day"

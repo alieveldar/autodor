@@ -1,0 +1,41 @@
+<%= form_for(@cartridge_transfer) do |f| %>
+  <% if @cartridge_transfer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cartridge_transfer.errors.count, "error") %> prohibited this cartridge_transfer from being saved:</h2>
+
+      <ul>
+      <% @cartridge_transfer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.number_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :count %><br>
+    <%= f.number_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_area :department %>
+  </div>
+  <div class="field">
+    <%= f.label :person_out %><br>
+    <%= f.number_field :person_out %>
+  </div>
+  <div class="field">
+    <%= f.label :person_in %><br>
+    <%= f.text_area :person_in %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

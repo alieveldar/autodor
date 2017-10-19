@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :cartridge_transfers
+  resources :cartridge_supplies
+  resources :cartridges
   get 'checklist/index'
 
   get 'checklist/new'

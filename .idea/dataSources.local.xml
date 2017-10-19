@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails autodor: development" uuid="66ce9a7c-2839-4936-a42a-300ea0a40cb7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails autodor: production" uuid="36d8e5e3-f218-488f-8401-ebddec693714">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>mrx</user-name>
+    </data-source>
+    <data-source name="Rails autodor: test" uuid="e3a192f2-fc87-411b-8a2b-679b8da75235">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+  </component>
+</project>

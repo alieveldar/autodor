@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: cartridge_supplies
+#
+#  id         :integer          not null, primary key
+#  model      :integer
+#  count      :integer
+#  state      :integer
+#  date       :date
+#  service    :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: 1
+  count: 1
+  state: 1
+  date: 2017-10-19
+  service: MyString
+
+two:
+  model: 1
+  count: 1
+  state: 1
+  date: 2017-10-19
+  service: MyString

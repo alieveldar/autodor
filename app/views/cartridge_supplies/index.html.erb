@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cartridge Supplies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Count</th>
+      <th>State</th>
+      <th>Date</th>
+      <th>Service</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cartridge_supplies.each do |cartridge_supply| %>
+      <tr>
+        <td><%= cartridge_supply.model %></td>
+        <td><%= cartridge_supply.count %></td>
+        <td><%= cartridge_supply.state %></td>
+        <td><%= cartridge_supply.date %></td>
+        <td><%= cartridge_supply.service %></td>
+        <td><%= link_to 'Show', cartridge_supply %></td>
+        <td><%= link_to 'Edit', edit_cartridge_supply_path(cartridge_supply) %></td>
+        <td><%= link_to 'Destroy', cartridge_supply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cartridge supply', new_cartridge_supply_path %>
